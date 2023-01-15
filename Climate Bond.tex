@@ -1,0 +1,120 @@
+
+\documentclass{article}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[toc,page]{appendix}
+\usepackage{tabto}
+\usepackage{xcolor}
+\usepackage{comment}
+\usepackage[en-GB]{datetime2}
+\DTMlangsetup[en-GB]{showdayofmonth=true,monthyearsep={,\space}}
+
+%\font\myverylargefont=cmr12 at 35pt
+\font\mylargefont=cmr12 at 25pt
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{pgf-pie} 
+
+
+%%%%%%%%%%%%% USER INPUT %%%%%%%%%%%%
+\newcommand{\MYDATE}{20230420}
+\newcommand{\MYLONGDATE}{2023-04-20}
+\newcommand{\MYCOUNTRY}{uk}
+\newcommand{\MYCCY}{GBP}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{figure}\centering
+	\includegraphics[width=0.3\textwidth]{mattimore_kelly_logo.png}
+\end{figure}
+
+\title{{\mylargefont Mattimore Kelly Research\vspace*{2\baselineskip} \\
+\mylargefont Climate Risk-Adjusted Bonds \vspace*{1\baselineskip} }}
+
+\vspace{\stretch{3}}
+
+\author{{Johnny Mattimore and David K Kelly}}
+\date{\today}
+
+\maketitle
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{arabic}
+\tableofcontents
+\clearpage
+
+\section{Purpose and Scope}
+This document provides an overview of isolating and measuring the climate-related risk embedded in the pricing of corporate and municiple bonds that have direct credit engagement (green bonds) or operate in industries that have material carbon footprint (utilities,  oil/gas majors,  large industrials, large transport) \par
+
+\subsection{Support}
+For any assistance, problems or suggestions regarding this document,  please contact David or Johnny at the following emails:\\ 
+\indent email:   \tabto{2cm} davidkerrkelly@hotmail.com johnny.mattimore@gmail.com
+
+\subsection{Document Revision History}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		Release Date & Description & Document Version & Library Version & Contributor\\
+		\hline
+		31-Jan-2023 & Internal beta release & v1.0 & v1.0 (Beta) & J. Mattimore D. Kelly \\
+	\end{tabular}
+	\label{tab:revision_history}
+\end{table}
+
+\section{Introduction}
+
+\section{Background}
+
+TBA \par
+
+The
+
+\section{Credit Paramaterisation under Nelson-Siegel-Svensson (NSS)}
+
+The Nelson-Siegel-Svensson formula is a simple extension to the Nelson-Siegel simplistic approach, providing an additional term to cope with a more stressed curve that is possible during a corporate credit event.
+\begin{equation}
+r(T) = \beta_0 + \displaystyle \frac{\beta_1(1-e^{-T/\tau})}{T/\tau} + \beta_2 \Bigg(\displaystyle \frac{1-e^{-T/\tau}}{T/\tau} - e^{T/\tau}\Bigg ) +  \beta_3 \Bigg(\displaystyle \frac{1-e^{-T/\tau_2}}{T/\tau_2} - e^{T/\tau_2}\Bigg )
+\end{equation}
+
+
+\section{Credit Spread Impact of Climate with Horizon beyond Bond Maturity} 
+
+
+
+
+%\bibliographystyle{plain}
+%\bibliography{../Miscellaneous/bibliography}
+
+\clearpage
+\begin{appendices}
+
+This document serves to confirm and protect the intellectual property rights of Johnny Mattimore and David K Kelly (the “Owners”) in the content provided through a presentation (the “Content”), including, but not limited to, the methodology associated with the Content (the “Methodology”).  \par
+
+The Owners retain full and exclusive ownership of the Content and the Methodology,  including all copyright and intellectual property rights associated with it. No other party shall have any right,  title or interest to the Content or Methodology,  outside of the right to use the content and the Methodology for their own personal,  non-commercial use. \par
+
+The Owners have made the Methodology available for use as open source,  meaning that users may freely use it for their own personal,  non-commercial use. However,  any attempt to replicate, duplicate or otherwise use the Content or Methodology with the view of commercial gain without the prior,  written notice of the Owners will be considered illegal and subject to legal action,  with all damages and costs associated with such action the responsibility of the infringers.  \par
+
+This document is effective and binding immediately upon its execution by the Owners. \par
+
+Signed,  \par
+
+Johnny Mattimore \par
+David K Kelly \par
+
+\end{appendices}
+\end{document}
